@@ -1,0 +1,18 @@
+<% include ../views/partials/header %>
+<div class="row">
+  <div class="col-md-6">
+      <form method="post" action="/todo/edit/<%= todo._id %>">
+        <div class="form-group">
+          <label>Todo Name</label>
+          <input class="form-control" type="text" name="text" placeholder="Add Todo" value="<%= todo.text %>">
+        </div>
+        <div class="form-group">
+          <label>Todo Body</label>
+          <textarea class="form-control" name="body" placeholder="Add Body"><%= todo.body %></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button> <a class="btn btn-danger" href="/">Cancel</a>
+      </form>
+  </div>
+</div>
+  
+<% include ../views/partials/footer %>
